@@ -1,0 +1,1701 @@
+*{box-sizing:border-box} :root{--bg:#080706;--panel:#11100e;--gold:#c9a77c;--gold2:#e2c49d;--muted:#99918a;--line:rgba(201,167,124,.24)} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(ellipse at 50% 0%,#201811 0,#080706 42rem);color:#f3eee8;font-family:Manrope,Arial,sans-serif} button{font:inherit;color:inherit}.topbar{height:96px;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(20px,5vw,76px);position:absolute;z-index:3;top:0;left:0;right:0}.brand{text-decoration:none;color:var(--gold2);display:flex;flex-direction:column;gap:0}.brand span{font-family:"Cormorant Garamond",serif;font-size:54px;line-height:.8;letter-spacing:.23em}.brand small{font-size:8px;letter-spacing:.28em;margin:12px 0 0 5px}.top-actions{display:flex;gap:24px}.icon-btn{border:0;background:none;color:var(--gold2);font-size:27px;cursor:pointer;position:relative}.icon-btn b{font:10px Manrope;background:var(--gold);color:#15100b;border-radius:20px;padding:2px 5px;position:absolute;top:-3px;right:-9px}.hero{min-height:450px;height:57vw;max-height:650px;position:relative;display:flex;align-items:flex-end;padding:0 clamp(24px,6vw,90px) 66px;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.38) 58%,rgba(0,0,0,.12)),linear-gradient(0deg,#080706 0%,transparent 35%),url("assets/hero.jpg") center/cover no-repeat,#17110d}.hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 75% 55%,transparent 0 22%,rgba(0,0,0,.22) 70%)}.hero-copy{position:relative;z-index:1}.eyebrow{font-size:11px;letter-spacing:.25em;color:var(--gold);text-transform:uppercase}.hero h1{font:400 clamp(58px,9vw,92px)/.9 "Cormorant Garamond",serif;margin:18px 0 12px}.tagline{display:flex;align-items:center;gap:12px;color:#c2b3a3;font-size:14px}.tagline i{width:42px;height:1px;background:var(--gold)}.hero-note{position:absolute;right:7%;bottom:18%;z-index:1;font:500 18px "Cormorant Garamond";letter-spacing:.3em;color:rgba(226,196,157,.55);text-align:right}.hero-note span{font:9px Manrope;letter-spacing:.35em}.category-nav{display:flex;gap:7px;overflow:auto;scrollbar-width:none;padding:14px clamp(16px,3vw,42px);margin:-1px auto 38px;position:relative;z-index:2;background:rgba(14,13,11,.93);border:1px solid rgba(201,167,124,.16);border-radius:40px;width:calc(100% - 40px);max-width:1300px}.category-nav button{white-space:nowrap;border:1px solid transparent;background:transparent;padding:12px 20px;border-radius:30px;color:#ddd3c8;cursor:pointer}.category-nav button.active,.category-nav button:hover{border-color:var(--gold);box-shadow:0 0 20px rgba(201,167,124,.18);color:#fff}.menu-section{max-width:1300px;margin:auto;padding:0 clamp(18px,3vw,42px) 90px}.section-heading{display:flex;align-items:end;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:20px}.section-heading h2{font:400 34px "Cormorant Garamond";margin:4px 0 0}.muted{color:var(--muted);font-size:13px}.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.product{min-height:220px;display:grid;grid-template-columns:47% 1fr;background:linear-gradient(115deg,#171512,#0b0a09);border:1px solid rgba(201,167,124,.13);border-radius:22px;overflow:hidden;box-shadow:0 12px 30px #0008}.product-photo{background:linear-gradient(135deg,#29211a,#100e0c);min-height:220px;position:relative}.product-photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.photo-placeholder{position:absolute;inset:0;display:grid;place-items:center;color:#6f5a43;font:italic 18px "Cormorant Garamond"}.product-info{padding:22px 20px;display:flex;flex-direction:column;align-items:flex-start}.product-info h3{font:500 27px/1.05 "Cormorant Garamond";margin:0 0 7px}.meta{color:#aaa19a;font-size:12px;margin-bottom:12px}.description{color:#aaa19a;font-size:13px;line-height:1.5;margin:0 0 16px}.product-foot{display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:auto}.price{font:500 29px "Cormorant Garamond";color:var(--gold2)}.add-btn{border:1px solid var(--gold);border-radius:50%;width:42px;height:42px;background:transparent;color:var(--gold2);font-size:23px;cursor:pointer}.add-btn:hover{background:var(--gold);color:#100d09}.cart-panel{position:fixed;z-index:10;right:0;top:0;height:100dvh;width:min(440px,100%);background:#100e0c;border-left:1px solid var(--line);padding:26px;transform:translateX(105%);transition:.3s;display:flex;flex-direction:column}.cart-panel.open{transform:translateX(0)}.cart-head,.total{display:flex;align-items:center;justify-content:space-between}.cart-head h2{font:400 30px "Cormorant Garamond"}.close-btn{border:0;background:none;font-size:30px;color:var(--gold);cursor:pointer}.cart-items{flex:1;overflow:auto}.cart-row{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}.cart-row button{background:none;border:1px solid var(--line);border-radius:50%;width:25px;height:25px}.cart-bottom{border-top:1px solid var(--line);padding-top:20px}.total{margin-bottom:18px}.total strong{font:28px "Cormorant Garamond";color:var(--gold2)}.gold-button{width:100%;border:0;border-radius:30px;padding:15px;background:linear-gradient(110deg,#a98255,#e1c39a);color:#17100a;font-weight:700;cursor:pointer}.scrim{position:fixed;inset:0;background:#0009;z-index:9;opacity:0;pointer-events:none;transition:.3s}.scrim.show{opacity:1;pointer-events:auto}.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);background:#c9a77c;color:#160f09;padding:12px 20px;border-radius:30px;opacity:0;transition:.25s;z-index:20}.toast.show{opacity:1;transform:translate(-50%,0)}@media(max-width:760px){.topbar{height:82px}.brand span{font-size:43px}.hero{height:530px;min-height:530px;padding-bottom:70px;background-position:58% center}.hero-note{display:none}.category-nav{margin-bottom:30px}.category-nav button{padding:10px 16px}.products{grid-template-columns:1fr;gap:14px}.product{min-height:190px;grid-template-columns:45% 1fr}.product-photo{min-height:190px}.product-info{padding:17px 14px}.product-info h3{font-size:24px}.description{font-size:12px}.price{font-size:26px}}@media(max-width:390px){.product{grid-template-columns:42% 1fr}.product-info{padding:14px 11px}.product-info h3{font-size:21px}.meta{font-size:11px}}
+
+/* Refinements requested for TAU visual direction */
+.brand{gap:2px}.brand span{font-size:clamp(54px,7vw,76px);letter-spacing:.19em;color:#e0bf96;text-shadow:0 2px 18px #b18a5c55}.brand small{font-size:11px;letter-spacing:.48em;color:#c9a77c;margin:8px 0 0 8px}
+.hero{background-image:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.12) 62%,rgba(0,0,0,.08)),linear-gradient(0deg,#080706 0%,transparent 31%),url("assets/hero.jpg");background-position:center,right center;background-size:cover}
+.hero-copy{padding-bottom:8px}.hero .eyebrow{display:none}
+.products{display:flex;flex-direction:column;gap:18px}
+.product{grid-template-columns:minmax(220px,43%) 1fr;min-height:230px}
+.product-photo{min-height:230px}
+.cart-panel{width:min(470px,100%);padding:30px 28px;background:linear-gradient(160deg,#191510,#0b0908 65%);box-shadow:-22px 0 70px #0009}
+.cart-head{align-items:flex-start;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.cart-head h2{font:400 38px "Cormorant Garamond";margin:5px 0 0}
+.cart-head .muted{margin:2px 0 0}
+.cart-items{padding:10px 0}
+.cart-row{align-items:center;padding:18px 2px;border-bottom:1px solid rgba(201,167,124,.16)}
+.cart-row b{display:inline-block;color:var(--gold2);font:22px "Cormorant Garamond";margin-top:5px}
+.cart-row button{width:32px;height:32px;color:var(--gold2);font-size:20px}
+.cart-bottom{padding-top:22px}
+.total{font-size:14px;color:#cfc4b8}
+.total strong{font-size:34px}
+.gold-button{min-height:54px;letter-spacing:.02em;box-shadow:0 8px 24px #a9825530}
+.gold-button span{font-size:20px;margin-left:8px}
+.cart-hint{font-size:11px;color:#81766b;text-align:center;margin:13px 0 0}
+.bag-btn{font-size:28px}.bag-icon{display:inline-block;border:1.5px solid var(--gold2);border-radius:5px;width:23px;height:23px;line-height:17px;font-size:18px}
+@media(max-width:760px){.brand span{font-size:57px}.brand small{font-size:10px}.hero{background-position:58% center;height:540px;min-height:540px}.products{display:flex;flex-direction:column}.product{grid-template-columns:46% 1fr;min-height:205px}.product-photo{min-height:205px}.cart-panel{padding:24px 20px}}
+@media(max-width:390px){.product{grid-template-columns:43% 1fr}.product-info{padding:14px 11px}}
+
+/* Premium TAU home + anchored menu */
+.brand-lockup{width:180px;text-decoration:none;color:var(--gold2);display:flex;flex-direction:column;align-items:center;gap:6px}
+.brand-symbol{width:94px;height:94px;border-radius:50%;background:#211d19;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:0 0 34px #0009}
+.brand-symbol i{height:16px;width:3px;background:#f1e5d6;display:block}.brand-symbol b{font:400 22px "Cormorant Garamond";letter-spacing:.12em;color:#f5eee5}.brand-symbol em{height:3px;width:26px;background:#f1e5d6;display:block}
+.brand-lockup small{font:9px Manrope;letter-spacing:.16em;color:#e8ded1;white-space:nowrap}.brand-lockup strong{font:10px Manrope;letter-spacing:.45em;color:var(--gold2);font-weight:500}
+.topbar{position:absolute;align-items:flex-start}.main-nav{display:flex;gap:25px;padding-top:28px}.main-nav a{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#e8ded1;text-decoration:none}.main-nav a:hover{color:var(--gold2)}
+.home-hero{height:740px;max-height:none;min-height:620px;align-items:center;padding-top:100px;background-image:linear-gradient(90deg,rgba(0,0,0,.86),rgba(0,0,0,.2) 62%,rgba(0,0,0,.02)),linear-gradient(0deg,#080706 0%,transparent 30%),url("assets/hero.jpg");background-position:center;background-size:cover}
+.hero h1{font-size:clamp(64px,9vw,112px);line-height:.83}.hero h1 span{color:var(--gold2)}.hero-cta{display:inline-flex;align-items:center;gap:24px;margin-top:28px;padding:15px 24px;border:1px solid var(--gold);border-radius:40px;color:#fff;text-decoration:none;font-size:13px;box-shadow:0 0 24px #c9a77c35}.hero-cta span{color:var(--gold2);font-size:22px}.scroll-cue{position:absolute;bottom:28px;left:50%;color:var(--gold2);font-size:22px}
+.menu-section{scroll-margin-top:20px;padding-top:35px}.section-heading h2{font-size:58px}.category-nav{position:sticky;top:8px;z-index:5;max-width:1300px;margin:20px auto 28px;background:rgba(10,9,8,.95);backdrop-filter:blur(16px)}
+.category-nav button.active{background:linear-gradient(110deg,#a98255,#e1c39a);color:#15100a;box-shadow:0 0 22px #c9a77c44}
+.menu-category{scroll-margin-top:90px;margin-bottom:42px}.category-title{display:flex;align-items:center;gap:18px;border-bottom:1px solid var(--line);margin-bottom:16px}.category-title h3{font:400 32px "Cormorant Garamond";margin:0 0 10px;color:var(--gold2)}.category-title span{font-size:11px;color:var(--muted)}
+.products{display:flex;flex-direction:column}.product{grid-template-columns:44% 1fr;min-height:225px}.product-photo{min-height:225px}.product-info h4{font:500 28px/1.05 "Cormorant Garamond";margin:0 0 8px}.empty-category{padding:6px 0 18px}
+.info-section{max-width:1100px;margin:0 auto;padding:90px 28px;border-top:1px solid var(--line);text-align:center}.info-section h2{font:400 clamp(38px,6vw,64px) "Cormorant Garamond";margin:12px 0;color:var(--gold2)}.info-section p{max-width:600px;margin:12px auto;color:#aaa19a;line-height:1.8}.info-section a:not(.hero-cta){color:var(--gold2);text-decoration:none}
+@media(max-width:760px){.topbar{height:110px;padding:14px 18px}.brand-lockup{width:130px;align-items:flex-start}.brand-symbol{width:76px;height:76px}.brand-symbol b{font-size:18px}.brand-lockup small{font-size:7px}.brand-lockup strong{font-size:9px}.main-nav{display:none}.top-actions{padding-top:18px}.home-hero{height:680px;min-height:620px;padding:0 25px 50px;background-position:58% center}.hero h1{font-size:68px}.menu-section{padding-top:15px}.section-heading h2{font-size:48px}.category-nav{width:calc(100% - 28px);padding:9px;gap:3px}.category-nav button{padding:10px 14px;font-size:12px}.product{grid-template-columns:44% 1fr;min-height:195px}.product-photo{min-height:195px}.product-info{padding:16px 14px}.product-info h4{font-size:24px}.info-section{padding:65px 22px}}
+@media(max-width:390px){.hero h1{font-size:59px}.product{grid-template-columns:42% 1fr}.product-info{padding:13px 10px}.product-info h4{font-size:21px}}
+
+.landing{background:#080706;color:#f2ece4}
+.landing-header{position:absolute;z-index:5;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:flex-start;padding:24px clamp(22px,6vw,90px)}
+.landing .brand-lockup{width:180px;text-decoration:none;color:#d9b486;display:flex;flex-direction:column;align-items:center;gap:6px}
+.landing .brand-symbol{width:112px;height:112px;border-radius:50%;background:#211d19;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:0 0 38px #000b}
+.landing .brand-symbol i{height:17px;width:3px;background:#f4e9dc;display:block}.landing .brand-symbol b{font:400 25px "Cormorant Garamond";letter-spacing:.12em;color:#f5eee5}.landing .brand-symbol em{height:3px;width:27px;background:#f4e9dc;display:block}
+.landing .brand-lockup small{font:9px Manrope;letter-spacing:.15em;color:#eee2d3;white-space:nowrap}.landing .brand-lockup strong{font:11px Manrope;letter-spacing:.5em;color:#d9b486;font-weight:500}
+.header-instagram{color:#d9b486;text-decoration:none;font-size:10px;letter-spacing:.2em;padding-top:32px}
+.landing-hero{min-height:650px;height:83vh;max-height:900px;display:flex;align-items:flex-end;padding:0 clamp(24px,8vw,120px) 85px;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.86),rgba(0,0,0,.24) 62%,rgba(0,0,0,.05)),linear-gradient(0deg,#080706 0%,transparent 36%),url("assets/hero.jpg") center 45%/cover no-repeat}
+.landing-hero:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 75% 48%,transparent 0 22%,rgba(0,0,0,.16) 72%);pointer-events:none}
+.landing-copy{position:relative;z-index:1;max-width:720px}.landing-copy .eyebrow{color:#d9b486;font-size:11px;letter-spacing:.27em}
+.landing-copy h1{font:400 clamp(58px,8vw,104px)/.9 "Cormorant Garamond";margin:22px 0;color:#f3ece3}.landing-copy h1 span{color:#d9b486}
+.landing-copy p{font-size:14px;color:#c4b8aa;letter-spacing:.03em;max-width:420px;line-height:1.8}
+.choice-section{max-width:1250px;margin:0 auto;padding:60px 28px 75px;text-align:center}
+.choice-intro h2{font:400 clamp(42px,5vw,62px) "Cormorant Garamond";margin:12px 0 4px}.choice-intro p{font-size:13px;color:#9c9288;margin:0}
+.choice-buttons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:38px}
+.choice-card{min-height:195px;text-align:left;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:22px 20px;text-decoration:none;color:#f2ece4;border:1px solid rgba(201,167,124,.34);border-radius:16px;background:linear-gradient(150deg,#1b1712,#0c0a09);transition:.25s}
+.choice-card:hover{transform:translateY(-5px);border-color:#d9b486;box-shadow:0 12px 32px #0008}
+.choice-number{position:absolute;top:18px;left:20px;color:#9d7954;font:18px "Cormorant Garamond"}
+.choice-title{font:500 25px/1.05 "Cormorant Garamond";color:#e2c49d}.choice-desc{font-size:11px;color:#aaa097;line-height:1.5;margin-top:10px;max-width:220px}.choice-arrow{position:absolute;right:18px;top:17px;color:#d9b486;font-size:20px}
+.ornamental-divider{display:flex;align-items:center;justify-content:center;gap:18px;max-width:900px;margin:0 auto 35px;color:#c9a77c}.ornamental-divider span{height:1px;flex:1;background:linear-gradient(90deg,transparent,#a98255,transparent)}.ornamental-divider b{font-size:24px;font-weight:400}
+.landing-footer{background:linear-gradient(180deg,#100d0a,#070605);border-top:1px solid rgba(201,167,124,.25);padding:45px clamp(22px,6vw,85px) 20px}
+.footer-brand{display:flex;flex-direction:column;align-items:flex-start;color:#d9b486;margin-bottom:30px}.footer-brand span{font:50px/.85 "Cormorant Garamond";letter-spacing:.22em}.footer-brand small{font-size:8px;letter-spacing:.22em;margin-top:10px;color:#9d8a75}
+.footer-columns{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-bottom:32px}.footer-columns h3{font:400 23px "Cormorant Garamond";color:#d9b486;margin:0 0 9px}.footer-columns p,.footer-columns small{font-size:12px;line-height:1.8;color:#aaa097;margin:0}.footer-columns a{color:#d9b486;text-decoration:none}.footer-columns small{font-size:10px;display:block;margin-top:5px}
+.map-wrap{border:1px solid rgba(201,167,124,.3);border-radius:14px;overflow:hidden;display:grid;grid-template-columns:240px 1fr;min-height:230px;background:#14100c}.map-caption{padding:24px;align-self:center}.map-caption h2{font:32px "Cormorant Garamond";color:#e2c49d;margin:8px 0}.map-wrap iframe{width:100%;height:230px;border:0;filter:grayscale(.8) sepia(.2) brightness(.8)}
+.footer-bottom{display:flex;justify-content:space-between;border-top:1px solid rgba(201,167,124,.15);padding-top:16px;margin-top:25px;color:#776e65;font-size:9px;letter-spacing:.15em}
+@media(max-width:850px){.choice-buttons{grid-template-columns:repeat(2,1fr)}.landing-hero{height:680px;min-height:620px;background-position:58% center}.footer-columns{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.landing-header{padding:16px 17px}.landing .brand-lockup{align-items:flex-start;width:150px}.landing .brand-symbol{width:86px;height:86px}.landing .brand-symbol b{font-size:20px}.landing .brand-lockup small{font-size:7px}.landing .brand-lockup strong{font-size:9px}.header-instagram{font-size:8px;padding-top:25px}.landing-hero{min-height:620px;height:78vh;padding:0 23px 65px;background-position:58% center}.landing-copy h1{font-size:61px}.landing-copy p{font-size:12px}.choice-section{padding:42px 16px 55px}.choice-buttons{grid-template-columns:1fr;gap:10px;margin-top:26px}.choice-card{min-height:130px;padding:18px}.choice-title{font-size:26px}.footer-columns{grid-template-columns:1fr 1fr;gap:24px 15px}.map-wrap{grid-template-columns:1fr}.map-caption{padding:18px 20px 8px}.map-wrap iframe{height:210px}.landing-footer{padding:35px 18px 18px}}
+
+/* Homepage refinement round */
+.landing-copy{max-width:570px;padding:26px 30px 28px;margin-left:-8px;background:linear-gradient(90deg,rgba(5,5,5,.66),rgba(5,5,5,.28) 78%,transparent);border-left:1px solid rgba(217,180,134,.55);backdrop-filter:blur(1.5px)}
+.landing-copy h1{font-size:clamp(48px,6.2vw,76px);line-height:.94;margin:0;text-shadow:0 3px 22px rgba(0,0,0,.9),0 1px 5px #000}
+.landing-copy h1 span{display:inline-block;color:#e0bd91;text-shadow:0 3px 22px rgba(0,0,0,.95),0 1px 5px #000}
+.choice-intro h2{margin:0;font-size:clamp(38px,4.5vw,54px)}
+.choice-card{min-height:164px;border-radius:19px;padding:24px 22px 22px;background:linear-gradient(135deg,rgba(43,34,25,.96),rgba(13,11,9,.98));}
+.choice-title{font-size:27px;max-width:240px}.choice-desc{max-width:230px}.choice-arrow{right:20px;top:50%;transform:translateY(-50%);font-size:25px;color:#d9b486}
+.choice-card:hover .choice-arrow{transform:translate(4px,-50%)}
+@media(max-width:850px){.choice-card{min-height:145px}}
+@media(max-width:520px){.landing-copy{margin-left:0;padding:18px 18px 19px;max-width:100%;background:linear-gradient(90deg,rgba(0,0,0,.73),rgba(0,0,0,.36));}.landing-copy h1{font-size:clamp(43px,11vw,57px);line-height:.98}.choice-card{min-height:112px;padding:17px 20px;border-radius:16px}.choice-title{font-size:25px;max-width:calc(100% - 34px)}.choice-desc{font-size:10px;margin-top:6px}.choice-arrow{right:17px;font-size:23px}}
+
+
+/* Homepage refinement v4: move descriptor above hero title, balanced action tiles */
+.landing .brand-lockup{gap:0}
+.landing .brand-lockup small,.landing .brand-lockup strong{display:none}
+.hero-kicker{display:block;color:#d9b486;font:500 10px Manrope,Arial,sans-serif;letter-spacing:.25em;margin:0 0 14px 2px;text-shadow:0 2px 10px #000}
+.landing-copy{padding-top:24px;padding-bottom:25px}
+.choice-buttons{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:stretch}
+.choice-card{min-height:178px;justify-content:center;align-items:center;text-align:center;padding:24px 22px;border-radius:20px;gap:12px}
+.choice-title{display:flex;align-items:center;justify-content:center;min-height:56px;width:100%;max-width:none;font-size:26px;line-height:1.12}
+.choice-desc{display:flex;align-items:center;justify-content:center;min-height:38px;width:100%;max-width:none;margin:0;font-size:11px;line-height:1.55}
+.choice-arrow{display:none!important}
+@media(max-width:850px){.choice-buttons{grid-template-columns:repeat(2,minmax(0,1fr))}.choice-card{min-height:160px}}
+@media(max-width:520px){.hero-kicker{font-size:8px;letter-spacing:.19em;margin-bottom:12px}.choice-buttons{grid-template-columns:1fr;gap:12px}.choice-card{min-height:116px;display:flex;flex-direction:row;justify-content:center;align-items:center;gap:6px;padding:18px 22px}.choice-title{min-height:0;font-size:24px}.choice-desc{min-height:0;font-size:10px}.landing .brand-lockup{gap:0}}
+
+/* Main menu sections and breakfast presentation */
+.category-nav{justify-content:center;gap:12px;padding:14px;margin-bottom:30px}
+.category-nav .category-main{display:flex;align-items:center;justify-content:center;gap:11px;min-width:190px;padding:13px 24px;font-size:14px;letter-spacing:.03em}
+.category-icon{display:inline-grid;place-items:center;width:25px;height:25px;border:1px solid currentColor;border-radius:50%;font-size:17px;line-height:1;color:var(--gold2)}
+.category-nav .category-main.active .category-icon{color:#17100a;border-color:#17100a}
+.breakfast-note{padding:12px 4px 26px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.breakfast-note h3,.bar-placeholder h3{font:400 42px "Cormorant Garamond",serif;margin:7px 0 4px}
+.breakfast-note p{color:#c7bdb2;font-size:14px;line-height:1.6;margin:7px 0 0}
+.breakfast-note .breakfast-hours{font:500 20px "Cormorant Garamond",serif;color:var(--gold2);margin-top:8px}
+.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.product-info h4{font:500 25px/1.08 "Cormorant Garamond",serif;margin:0 0 8px}
+.addons{width:100%;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--line);padding-top:11px;margin-top:14px}
+.addons>span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.addon-btn{display:flex;justify-content:space-between;gap:8px;text-align:left;border:0;background:transparent;padding:4px 0;color:#c9bfb5;font-size:12px;cursor:pointer}
+.addon-btn b{color:var(--gold2);font-size:16px}
+.subcategory-nav{display:flex;gap:8px;overflow-x:auto;padding:4px 0 20px;scrollbar-width:thin}
+.subcategory-nav button{flex:0 0 auto;border:1px solid var(--line);border-radius:30px;background:#11100e;color:#d8cfc5;padding:9px 15px;font-size:12px;cursor:pointer}
+.subcategory-nav button:hover{border-color:var(--gold);color:var(--gold2)}
+.main-menu-groups .menu-category{padding:18px 0;border-bottom:1px solid var(--line);scroll-margin-top:90px}
+.main-menu-groups .category-title h3{font:400 34px "Cormorant Garamond",serif;margin:0 0 15px}
+.bar-placeholder{padding:35px 4px;min-height:190px}
+@media(max-width:760px){.category-nav{justify-content:flex-start;gap:5px}.category-nav .category-main{min-width:0;flex:1;padding:11px 8px;gap:6px;font-size:11px}.category-icon{width:22px;height:22px;font-size:15px}.products{grid-template-columns:1fr}.breakfast-note h3{font-size:36px}.breakfast-note p{font-size:13px}.product-info h4{font-size:23px}.addons{margin-top:10px}}
+
+/* Menu dishes are displayed as a single vertical list on every screen size */
+.menu-section .products,
+.menu-category .products,
+.breakfast-category .products,
+.main-menu-groups .products {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch;
+  gap: 18px;
+}
+.menu-section .products > .product,
+.menu-category .products > .product,
+.breakfast-category .products > .product,
+.main-menu-groups .products > .product {
+  display: grid;
+  grid-template-columns: minmax(220px, 34%) minmax(0, 1fr);
+  width: 100%;
+  max-width: 100%;
+}
+@media (max-width: 760px) {
+  .menu-section .products > .product,
+  .menu-category .products > .product,
+  .breakfast-category .products > .product,
+  .main-menu-groups .products > .product {
+    grid-template-columns: 40% minmax(0, 1fr);
+  }
+}
+@media (max-width: 390px) {
+  .menu-section .products > .product,
+  .menu-category .products > .product,
+  .breakfast-category .products > .product,
+  .main-menu-groups .products > .product {
+    grid-template-columns: 36% minmax(0, 1fr);
+  }
+}
+/* Исправление фото на телефоне */
+@media (max-width: 520px) {
+  .landing-hero {
+    background-position: 62% center;
+    background-size: cover;
+    min-height: 620px;
+    height: 78vh;
+  }
+
+  .landing-hero::after {
+    pointer-events: none;
+  }
+}
+/* Убираем дополнительные подписи на главной */
+.choice-desc {
+  display: none !important;
+}
+
+.choice-card {
+  justify-content: center;
+  min-height: 110px;
+}
+
+.choice-title {
+  min-height: 0;
+}
+.choice-icon {
+  display: block;
+  font-size: 29px;
+  line-height: 1;
+  margin-bottom: 12px;
+  color: var(--gold2);
+}
+
+.choice-card {
+  flex-direction: column;
+}
+/* =================================
+   TAU — МОБІЛЬНА ВЕРСІЯ
+================================= */
+
+@media screen and (max-width: 600px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .topbar {
+    width: 100%;
+    padding: 14px 18px;
+  }
+
+  .brand-symbol b {
+    font-size: 25px;
+  }
+
+  .top-actions {
+    gap: 12px;
+  }
+
+  .icon-btn {
+    min-width: 42px;
+    min-height: 42px;
+  }
+
+  .hero,
+  .home-hero {
+    width: 100%;
+    min-height: 620px;
+    height: 85svh;
+    padding: 90px 22px 70px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(42px, 12vw, 64px);
+    line-height: 0.95;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-copy h1 span {
+    font-size: 0.62em;
+    letter-spacing: 2px;
+  }
+
+  .tagline {
+    max-width: 320px;
+    font-size: 10px;
+    line-height: 1.7;
+    letter-spacing: 1.5px;
+  }
+
+  .menu-section,
+  .info-section {
+    width: 100%;
+    padding: 55px 18px;
+  }
+
+  .section-heading {
+    gap: 12px;
+    align-items: flex-end;
+  }
+
+  .section-heading h2,
+  .info-section h2 {
+    font-size: 34px;
+  }
+
+  .category-nav {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 12px;
+  }
+
+  .products,
+  .menu-section .products,
+  .menu-category .products,
+  .breakfast-category .products,
+  .main-menu-groups .products {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    width: 100%;
+    gap: 18px;
+  }
+
+  .product-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .product-card img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .cart-panel {
+    width: 100%;
+    max-width: 100%;
+    right: 0;
+  }
+
+  .cart-items {
+    overflow-y: auto;
+  }
+
+  .gold-button,
+  .hero-cta {
+    min-height: 50px;
+    max-width: 100%;
+  }
+
+  .contacts-section a {
+    overflow-wrap: anywhere;
+  }
+
+}
+/* TAU HERO TITLE FIX */
+
+.tau-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  line-height: 0.9;
+}
+
+.tau-title span {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.55em;
+  letter-spacing: 0.16em;
+}
+
+.tau-line {
+  width: 90px;
+  height: 1px;
+  background: #c5a36a;
+  margin: 24px 0 18px;
+}
+
+.tagline {
+  display: block;
+  max-width: 100%;
+  font-size: 12px;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .tau-title {
+    font-size: clamp(48px, 13vw, 68px);
+  }
+
+  .tau-title span {
+    font-size: 0.52em;
+    letter-spacing: 0.12em;
+  }
+
+  .tau-line {
+    width: 75px;
+    margin: 20px 0 15px;
+  }
+
+  .tagline {
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    line-height: 1.8;
+  }
+}
+
+/* TAU — FIX MOBILE HEADER AND HERO PHOTO */
+
+@media screen and (max-width: 600px) {
+
+  /* Возвращаем логотип в левый верхний угол */
+  .topbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 90px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .brand-lockup {
+    width: auto;
+    margin: 0;
+    align-items: flex-start;
+  }
+
+  .brand-symbol {
+    width: 76px;
+    height: 76px;
+    margin: 0;
+  }
+
+  .top-actions {
+    padding-top: 12px;
+    margin-left: auto;
+  }
+
+  /* Делаем фотографию заметнее */
+  .home-hero {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(0,0,0,.48),
+        rgba(0,0,0,.08) 75%
+      ),
+      linear-gradient(
+        0deg,
+        #080706 0%,
+        transparent 25%
+      ),
+      url("assets/hero.jpg");
+
+    background-position: 62% center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .home-hero::after {
+    background: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .brand-symbol {
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .brand-symbol b {
+    font-size: 18px !important;
+    letter-spacing: 0.08em !important;
+    white-space: nowrap;
+    line-height: 1;
+  }
+}
+@media screen and (max-width: 600px) {
+  .top-actions .icon-btn:not(.bag-btn) {
+    display: none !important;
+  }
+}
+#menu-toggle {
+  display: none !important;
+}
+/* TAU — MENU BUTTON ON HOMEPAGE */
+
+.landing-header {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000 !important;
+}
+
+.landing-header .top-actions {
+  display: flex !important;
+  position: relative;
+  z-index: 1001;
+  padding: 18px 28px 0 0 !important;
+}
+
+.landing-header #menu-toggle {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #c5a36a !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-header .menu-lines {
+  display: flex !important;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.landing-header .menu-lines i {
+  display: block !important;
+  width: 21px;
+  height: 1px;
+  background: #c5a36a !important;
+}
+
+@media(max-width:600px) {
+  .landing-header .top-actions {
+    padding: 14px 18px 0 0 !important;
+  }
+}
+/* TAU — LUXURY GLOW MENU BUTTON */
+
+#menu-toggle {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: #e2bd7d !important;
+  background: transparent !important;
+  border: 1px solid rgba(197,163,106,.25) !important;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  box-shadow:
+    0 0 12px rgba(197,163,106,.18),
+    0 0 25px rgba(197,163,106,.10);
+}
+
+.menu-lines {
+  display: flex !important;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-lines i {
+  display: block !important;
+  width: 21px;
+  height: 1.5px;
+  background: #e8c98f !important;
+  box-shadow: 0 0 7px rgba(232,201,143,.9);
+}
+
+#menu-toggle:hover {
+  box-shadow:
+    0 0 15px rgba(197,163,106,.5),
+    0 0 30px rgba(197,163,106,.25);
+}
+
+.landing-header,
+.topbar {
+  z-index: 1000;
+}
+
+/* TAU — ELEGANT DROPDOWN NAVIGATION */
+
+.tau-dropdown {
+  width: min(360px, calc(100vw - 36px));
+  padding: 12px 25px;
+  background: rgba(13, 12, 10, .98);
+  border: 1px solid rgba(197, 163, 106, .38);
+  box-shadow: 0 18px 55px rgba(0,0,0,.65);
+  backdrop-filter: blur(18px);
+  border-radius: 2px;
+}
+
+.tau-dropdown a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 0;
+  color: #eee4d4;
+  text-decoration: none;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: .4px;
+  border-bottom: 1px solid rgba(197,163,106,.16);
+  transition: color .25s ease, padding .25s ease;
+}
+
+.tau-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.tau-dropdown a i {
+  color: #c5a36a;
+  font-family: Manrope, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  opacity: .7;
+}
+
+.tau-dropdown a:hover {
+  color: #d9b878;
+  padding-left: 7px;
+}
+
+.tau-dropdown a:hover i {
+  opacity: 1;
+}
+
+@media(max-width:600px) {
+  .tau-dropdown a {
+    font-size: 19px;
+    padding: 17px 0;
+  }
+}
+
+/* ПОСТОЯННО ВИДИМАЯ КОРЗИНА */
+
+#cart-open {
+  position: fixed !important;
+  right: 20px !important;
+  bottom: 22px !important;
+  top: auto !important;
+  z-index: 2500 !important;
+
+  width: 62px !important;
+  height: 62px !important;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  background: #17130e !important;
+  color: #e8c98f !important;
+  border: 1px solid #c5a36a !important;
+  border-radius: 50% !important;
+
+  box-shadow:
+    0 0 15px rgba(197,163,106,.35),
+    0 0 30px rgba(197,163,106,.15) !important;
+}
+
+#cart-open svg {
+  width: 25px;
+  height: 25px;
+}
+
+#cart-count {
+  position: absolute !important;
+  top: -5px !important;
+  right: -5px !important;
+  min-width: 21px;
+  height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #c5a36a !important;
+  color: #100e0b !important;
+  font-size: 11px;
+}
+
+@media(max-width:600px) {
+  #cart-open {
+    right: 16px !important;
+    bottom: 18px !important;
+    width: 58px !important;
+    height: 58px !important;
+  }
+}
+
+/* TAU UNIFIED FOOTER */
+
+.tau-footer {
+  width: 100%;
+  padding: 65px 8% 25px;
+  background: #080706;
+  color: #eee5d8;
+  border-top: 1px solid rgba(197,163,106,.3);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+.footer-brand {
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(197,163,106,.2);
+  width: 100%;
+}
+
+.footer-brand h2 {
+  margin: 0;
+  color: #e8c98f;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 35px;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+.footer-brand span,
+.footer-eyebrow {
+  color: #c5a36a;
+  font-family: Manrope, sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.footer-section h3 {
+  margin: 0;
+  color: #c5a36a;
+  font-family: Manrope, sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.footer-section p,
+.footer-section a {
+  margin: 0;
+  color: #c8bfb1;
+  font-family: Manrope, sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+  text-decoration: none;
+}
+
+.footer-section a:hover,
+.footer-map a:hover {
+  color: #e8c98f;
+}
+
+.footer-map {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.footer-map h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.footer-map iframe {
+  display: block;
+  width: 100%;
+  height: 280px;
+  border: 1px solid rgba(197,163,106,.3);
+  filter: grayscale(1) brightness(.75);
+}
+
+.footer-map a {
+  color: #c5a36a;
+  font-family: Manrope, sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  width: 100%;
+  padding-top: 22px;
+  border-top: 1px solid rgba(197,163,106,.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #918779;
+  font-family: Manrope, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+@media(max-width:600px) {
+  .tau-footer {
+    padding: 50px 25px 22px;
+    gap: 27px;
+  }
+
+  .footer-brand h2 {
+    font-size: 30px;
+  }
+
+  .footer-map iframe {
+    height: 230px;
+  }
+}
+
+/* =========================================
+   TAU — FIXED MENU BUTTON ON ALL SCREENS
+========================================= */
+
+#menu-toggle {
+  position: fixed !important;
+  top: 24px !important;
+  right: 30px !important;
+  z-index: 99999 !important;
+
+  width: 46px !important;
+  height: 46px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border: 1px solid rgba(197,163,106,.4) !important;
+  border-radius: 50% !important;
+  background: rgba(8,7,6,.82) !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 18px rgba(197,163,106,.18) !important;
+}
+
+#menu-toggle .menu-lines {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+
+#menu-toggle .menu-lines i {
+  display: block !important;
+  width: 20px !important;
+  height: 1.5px !important;
+  background: #e8c98f !important;
+  border-radius: 2px !important;
+  box-shadow: 0 0 5px rgba(232,201,143,.35) !important;
+}
+
+#menu-toggle:hover {
+  border-color: #e8c98f !important;
+  box-shadow: 0 0 22px rgba(197,163,106,.35) !important;
+}
+
+@media (max-width: 600px) {
+  #menu-toggle {
+    top: 16px !important;
+    right: 17px !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+}
+
+/* =========================================
+   TAU — CLEAN ARROW SYMBOLS
+========================================= */
+
+.tau-footer a,
+.footer-section a,
+.footer-map a,
+.tau-dropdown a,
+.choice-card,
+.hero-cta {
+  font-variant-emoji: text;
+}
+
+.tau-footer a,
+.footer-section a,
+.footer-map a,
+.tau-dropdown a {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+.tau-footer a,
+.footer-section a,
+.footer-map a {
+  font-family: Manrope, "Arial", sans-serif;
+}
+
+/* Стрелки меню */
+.tau-dropdown a i {
+  font-family: Arial, sans-serif !important;
+  font-style: normal !important;
+  font-size: 17px !important;
+  font-weight: 300 !important;
+  color: #d9b486 !important;
+}
+
+/* Стрелки на мобильных */
+@media (max-width: 600px) {
+  .tau-footer a,
+  .footer-section a,
+  .footer-map a {
+    font-size: 13px;
+    letter-spacing: .02em;
+  }
+}
+/* TAU — ПЛАВНОЕ УМЕНЬШЕНИЕ КНОПКИ ПРИ ПРОКРУТКЕ */
+
+#menu-toggle {
+  transition:
+    width .3s ease,
+    height .3s ease,
+    top .3s ease,
+    right .3s ease,
+    background .3s ease,
+    box-shadow .3s ease !important;
+}
+
+#menu-toggle .menu-lines i {
+  transition: width .3s ease, gap .3s ease !important;
+}
+
+#menu-toggle.scrolled {
+  width: 38px !important;
+  height: 38px !important;
+  top: 14px !important;
+  right: 30px !important;
+  background: rgba(8,7,6,.94) !important;
+  box-shadow: 0 0 12px rgba(197,163,106,.22) !important;
+}
+
+#menu-toggle.scrolled .menu-lines {
+  gap: 4px !important;
+}
+
+#menu-toggle.scrolled .menu-lines i {
+  width: 17px !important;
+}
+
+@media(max-width:600px) {
+  #menu-toggle.scrolled {
+    width: 36px !important;
+    height: 36px !important;
+    top: 12px !important;
+    right: 17px !important;
+  }
+}
+
+/* =========================================
+   TAU — ЕДИНЫЙ СТИЛЬ СТРЕЛОК НА ВСЁМ САЙТЕ
+   Desktop + Mobile
+========================================= */
+
+/* Общий стиль символов-стрелок */
+.tau-arrow,
+.tau-dropdown a i,
+.choice-arrow,
+.hero-cta span,
+.gold-button span {
+  font-family: Arial, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-variant-emoji: text;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  color: #d9b486;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+/* Стрелки выпадающего меню */
+.tau-dropdown a i {
+  font-size: 17px !important;
+  opacity: .85;
+}
+
+.tau-dropdown a:hover i {
+  transform: translate(3px, -3px);
+  opacity: 1;
+}
+
+/* Стрелки карточек главной */
+.choice-arrow {
+  font-size: 22px !important;
+}
+
+.choice-card:hover .choice-arrow {
+  transform: translate(4px, -2px);
+}
+
+/* Стрелки CTA-кнопок */
+.hero-cta span,
+.gold-button span {
+  font-size: 20px !important;
+  margin-left: 8px;
+}
+
+.hero-cta:hover span,
+.gold-button:hover span {
+  transform: translateX(4px);
+}
+
+/* Стрелки футера и ссылок */
+.tau-footer a,
+.footer-section a,
+.footer-map a,
+.footer-columns a {
+  font-variant-emoji: text;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tau-footer a .tau-arrow,
+.footer-section a .tau-arrow,
+.footer-map a .tau-arrow,
+.footer-columns a .tau-arrow {
+  font-size: 15px;
+  margin-left: 4px;
+}
+
+/* Стрелка прокрутки */
+.scroll-cue,
+.scroll-cue .tau-arrow {
+  font-family: Arial, sans-serif !important;
+  font-weight: 300 !important;
+  font-variant-emoji: text;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Стрелки маршрута и внешних ссылок */
+a[href*="maps"] .tau-arrow,
+a[href*="instagram"] .tau-arrow {
+  font-size: 15px;
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+@media (max-width: 600px) {
+
+  .tau-dropdown a i {
+    font-size: 16px !important;
+  }
+
+  .choice-arrow {
+    font-size: 21px !important;
+  }
+
+  .hero-cta span,
+  .gold-button span {
+    font-size: 18px !important;
+  }
+
+  .tau-footer a .tau-arrow,
+  .footer-section a .tau-arrow,
+  .footer-map a .tau-arrow,
+  .footer-columns a .tau-arrow {
+    font-size: 14px;
+  }
+
+  .scroll-cue,
+  .scroll-cue .tau-arrow {
+    font-size: 20px !important;
+  }
+}
+/* ========================================
+   TAU — КРАСИВАЯ СТРЕЛКА ДОБАВЛЕНИЯ В КОРЗИНУ
+======================================== */
+
+.add-btn .tau-arrow {
+  display: inline-block !important;
+  position: relative !important;
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #d9b486 !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
+  transition: transform .25s ease, color .25s ease !important;
+}
+
+/* Линия стрелки */
+.add-btn .tau-arrow::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 1px;
+  top: 7px;
+  left: 1px;
+  background: currentColor;
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+
+/* Наконечник */
+.add-btn .tau-arrow::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 2px;
+  right: 1px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+}
+
+/* Наведение на компьютере */
+.add-btn:hover .tau-arrow {
+  color: #f0d2ad !important;
+  transform: translate(2px, -2px);
+}
+
+/* Телефоны */
+@media (max-width: 768px) {
+  .add-btn .tau-arrow {
+    width: 16px !important;
+    height: 16px !important;
+    transform: none;
+  }
+
+  .add-btn:active .tau-arrow {
+    transform: translate(1px, -1px);
+  }
+}
+
+/* =========================================
+   TAU — ВЫПАДАЮЩЕЕ МЕНЮ ВСЕГДА ПОВЕРХ СТРАНИЦЫ
+========================================= */
+
+#menu-toggle {
+  position: fixed !important;
+  top: 24px !important;
+  right: 30px !important;
+  z-index: 100002 !important;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Сам список меню */
+.tau-dropdown {
+  position: fixed !important;
+  top: 82px !important;
+  right: 30px !important;
+  left: auto !important;
+  z-index: 100001 !important;
+  width: min(360px, calc(100vw - 36px)) !important;
+  max-height: calc(100dvh - 105px) !important;
+  overflow-y: auto !important;
+  background: rgba(13, 12, 10, .98) !important;
+  border: 1px solid rgba(197, 163, 106, .45) !important;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, .75) !important;
+  backdrop-filter: blur(18px);
+}
+
+/* На телефонах */
+@media (max-width: 600px) {
+  #menu-toggle {
+    top: 16px !important;
+    right: 17px !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  #menu-toggle.scrolled {
+    top: 12px !important;
+    right: 17px !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .tau-dropdown {
+    top: 70px !important;
+    right: 16px !important;
+    left: auto !important;
+    width: calc(100vw - 32px) !important;
+    max-height: calc(100dvh - 90px) !important;
+  }
+}
+
+/* TAU — УБИРАЕМ СТРЕЛКИ С КАРТОЧЕК ГЛАВНОЙ */
+
+.choice-card .choice-arrow,
+.choice-card > .tau-arrow {
+  display: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+.subcategory-nav button,
+.category-icon,
+.menu-category {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* TAU — ПОСТОЯННАЯ ПАНЕЛЬ КАТЕГОРИЙ */
+
+.subcategory-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  background: rgba(8, 7, 6, .97);
+  backdrop-filter: blur(14px);
+  transition: padding .3s ease, min-height .3s ease;
+}
+
+.subcategory-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.subcategory-nav button {
+  flex-shrink: 0;
+  transition: padding .3s ease, font-size .3s ease;
+}
+
+.subcategory-nav.compact {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.subcategory-nav.compact button {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 11px;
+}
+
+.menu-category {
+  scroll-margin-top: 100px;
+}
+
+@media (max-width: 600px) {
+  .subcategory-nav {
+    top: 0;
+  }
+
+  .subcategory-nav.compact button {
+    padding: 7px 10px;
+    font-size: 10px;
+  }
+
+  .menu-category {
+    scroll-margin-top: 85px;
+  }
+}
+
+/* =========================================
+   TAU — BLACK MARBLE PREMIUM MENU
+   Финальное оформление для ПК и телефона
+========================================= */
+
+/* Основной фон — чёрный мрамор */
+html,
+body {
+  background-color: #080808 !important;
+}
+
+body {
+  background-image:
+    radial-gradient(
+      ellipse at 15% 20%,
+      rgba(125, 112, 96, .09),
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 85% 55%,
+      rgba(145, 125, 101, .07),
+      transparent 42%
+    ),
+    repeating-linear-gradient(
+      125deg,
+      transparent 0px,
+      transparent 75px,
+      rgba(190, 180, 165, .018) 76px,
+      transparent 78px,
+      transparent 155px
+    ),
+    linear-gradient(145deg, #111110, #070707 55%, #10100f) !important;
+
+  background-attachment: fixed !important;
+  color: #f3eee8;
+}
+
+/* Фон раздела меню */
+.menu-section,
+.main-menu-groups,
+.menu-category,
+.breakfast-category {
+  background: transparent !important;
+}
+
+/* Заголовки категорий */
+.category-title h3,
+.section-heading h2 {
+  color: #e2c49d !important;
+}
+
+/* Карточки блюд — глубокий графит */
+.product {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(35, 33, 30, .97),
+      rgba(13, 13, 12, .99) 55%,
+      rgba(20, 18, 16, .98)
+    ) !important;
+
+  border: 1px solid rgba(201, 167, 124, .22) !important;
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, .48),
+    inset 0 1px 0 rgba(255, 255, 255, .025) !important;
+}
+
+/* Фото блюд */
+.product-photo {
+  background:
+    linear-gradient(135deg, #24221f, #0b0b0a) !important;
+}
+
+/* Текст карточек */
+.product-info h3,
+.product-info h4 {
+  color: #f1e7db !important;
+}
+
+.description,
+.meta {
+  color: #aaa39a !important;
+}
+
+.price {
+  color: #e2c49d !important;
+}
+
+/* =========================================
+   ПАНЕЛЬ КАТЕГОРИЙ
+========================================= */
+
+.category-nav {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(31, 28, 24, .78),
+      rgba(12, 12, 11, .82)
+    ) !important;
+
+  border: 1px solid rgba(201, 167, 124, .28) !important;
+  border-radius: 24px !important;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, .35),
+    inset 0 1px 0 rgba(255, 255, 255, .04) !important;
+
+  backdrop-filter: blur(22px) !important;
+  -webkit-backdrop-filter: blur(22px) !important;
+}
+
+/* Кнопки категорий */
+.category-nav .category-main {
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 16px !important;
+  color: #d9cfc2 !important;
+  transition: .3s ease !important;
+}
+
+/* Иконки категорий */
+.category-icon {
+  background: rgba(201, 167, 124, .07) !important;
+  border: 1px solid rgba(201, 167, 124, .45) !important;
+  color: #e2c49d !important;
+  box-shadow: 0 0 15px rgba(201, 167, 124, .06);
+  transition: .3s ease !important;
+}
+
+/* Активная категория */
+.category-nav .category-main.active {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(201, 167, 124, .19),
+      rgba(201, 167, 124, .07)
+    ) !important;
+
+  border-color: rgba(201, 167, 124, .48) !important;
+  color: #f3dfc3 !important;
+}
+
+.category-nav .category-main.active .category-icon {
+  background: #c9a77c !important;
+  color: #15110d !important;
+  border-color: #e2c49d !important;
+}
+
+/* Наведение */
+.category-nav .category-main:hover {
+  background: rgba(201, 167, 124, .10) !important;
+  border-color: rgba(201, 167, 124, .25) !important;
+}
+
+/* Подкатегории */
+.subcategory-nav {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(22, 21, 19, .94),
+      rgba(8, 8, 8, .96)
+    ) !important;
+
+  border-bottom: 1px solid rgba(201, 167, 124, .2);
+  backdrop-filter: blur(22px) !important;
+  -webkit-backdrop-filter: blur(22px) !important;
+}
+
+.subcategory-nav button {
+  background: rgba(201, 167, 124, .045) !important;
+  border: 1px solid rgba(201, 167, 124, .22) !important;
+  color: #d9cfc2 !important;
+  border-radius: 30px !important;
+}
+
+.subcategory-nav button:hover,
+.subcategory-nav button.active {
+  background: rgba(201, 167, 124, .18) !important;
+  border-color: #c9a77c !important;
+  color: #f1d7b5 !important;
+}
+
+/* Разделители */
+.category-title,
+.main-menu-groups .menu-category {
+  border-color: rgba(201, 167, 124, .18) !important;
+}
+
+/* Кнопки добавления */
+.add-btn {
+  background: rgba(201, 167, 124, .06) !important;
+  border-color: rgba(201, 167, 124, .65) !important;
+  color: #e2c49d !important;
+}
+
+/* =========================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+========================================= */
+
+@media (max-width: 600px) {
+
+  body {
+    background-image:
+      radial-gradient(
+        ellipse at 10% 15%,
+        rgba(145, 130, 110, .09),
+        transparent 45%
+      ),
+      radial-gradient(
+        ellipse at 90% 65%,
+        rgba(145, 125, 101, .07),
+        transparent 45%
+      ),
+      repeating-linear-gradient(
+        130deg,
+        transparent 0px,
+        transparent 65px,
+        rgba(190, 180, 165, .022) 66px,
+        transparent 68px,
+        transparent 140px
+      ),
+      linear-gradient(145deg, #111110, #070707 60%, #10100f) !important;
+
+    background-attachment: scroll !important;
+  }
+
+  .menu-section {
+    background: transparent !important;
+  }
+
+  .product {
+    background:
+      linear-gradient(
+        135deg,
+        #201e1b,
+        #10100f 65%,
+        #171512
+      ) !important;
+
+    border: 1px solid rgba(201, 167, 124, .24) !important;
+    border-radius: 17px !important;
+    box-shadow: 0 9px 28px rgba(0, 0, 0, .5) !important;
+  }
+
+  .category-nav {
+    width: calc(100% - 24px) !important;
+    padding: 9px !important;
+    gap: 5px !important;
+    border-radius: 20px !important;
+
+    background: rgba(20, 19, 17, .82) !important;
+    border: 1px solid rgba(201, 167, 124, .25) !important;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .35) !important;
+  }
+
+  .category-nav .category-main {
+    padding: 10px 9px !important;
+    border-radius: 14px !important;
+  }
+
+  .category-icon {
+    width: 25px !important;
+    height: 25px !important;
+    background: rgba(201, 167, 124, .08) !important;
+  }
+
+  .category-nav .category-main.active {
+    background: rgba(201, 167, 124, .17) !important;
+  }
+
+  .subcategory-nav {
+    top: 0 !important;
+    background: rgba(12, 12, 11, .96) !important;
+    border-bottom: 1px solid rgba(201, 167, 124, .22);
+  }
+
+  .subcategory-nav.compact {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .subcategory-nav button {
+    background: rgba(201, 167, 124, .06) !important;
+  }
+
+  .product-info {
+    background: transparent !important;
+  }
+}
+
+/* =========================================
+   TAU — УБИРАЕМ ЗАТЕМНЕНИЕ ФОНА СУШИ И САКУРЫ
+========================================= */
+
+#home.home-hero {
+  position: relative;
+  isolation: isolate;
+}
+
+#home.home-hero::after {
+  content: none !important;
+  display: none !important;
+}
+
+#home.home-hero .hero-copy,
+#home.home-hero .scroll-cue {
+  position: relative;
+  z-index: 3;
+}
+
+/* =========================================
+   ЧЁРНЫЙ МРАМОР — РАЗДЕЛ МЕНЮ
+========================================= */
+
+#menu.menu-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-top: 0;
+  padding-top: 55px;
+  background:
+    radial-gradient(ellipse at 15% 18%, rgba(160,140,115,.12), transparent 38%),
+    radial-gradient(ellipse at 82% 62%, rgba(120,110,100,.10), transparent 40%),
+    linear-gradient(125deg, transparent 24%, rgba(220,205,185,.055) 24.15%, transparent 24.4%),
+    linear-gradient(155deg, transparent 48%, rgba(220,205,185,.07) 48.12%, transparent 48.35%),
+    linear-gradient(75deg, transparent 72%, rgba(190,175,155,.06) 72.15%, transparent 72.4%),
+    repeating-linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 180px,
+      rgba(210,195,175,.025) 182px,
+      transparent 185px,
+      transparent 290px
+    ),
+    linear-gradient(145deg, #080807 0%, #171512 48%, #090908 100%) !important;
+}
+
+#menu.menu-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .8;
+  background:
+    linear-gradient(112deg, transparent 12%, rgba(225,210,190,.10) 12.08%, transparent 12.22%),
+    linear-gradient(165deg, transparent 36%, rgba(210,195,175,.08) 36.12%, transparent 36.3%),
+    linear-gradient(95deg, transparent 64%, rgba(220,205,185,.07) 64.1%, transparent 64.3%),
+    linear-gradient(25deg, transparent 80%, rgba(210,195,175,.06) 80.1%, transparent 80.3%);
+}
+
+#menu.menu-section > * {
+  position: relative;
+}
+
+#menu #category-nav,
+#menu #menu-groups {
+  background: transparent !important;
+}
+
+/* ТЁМНЫЕ КАРТОЧКИ БЛЮД */
+#menu .product {
+  background: rgba(8,7,6,.88) !important;
+  border-color: rgba(201,167,124,.22);
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+@media (max-width: 600px) {
+  #home.home-hero::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  #menu.menu-section {
+    padding-top: 40px;
+  }
+}
+
+/* =========================================
+   TAU — ПРИНУДИТЕЛЬНЫЙ ЧЁРНЫЙ МРАМОР
+========================================= */
+
+body:has(#menu.menu-section) #menu.menu-section {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background-color: #0b0a09 !important;
+  background-image:
+    radial-gradient(ellipse at 20% 15%, rgba(180,155,125,.16), transparent 35%),
+    radial-gradient(ellipse at 80% 75%, rgba(150,135,115,.12), transparent 40%),
+    repeating-linear-gradient(125deg, transparent 0 120px, rgba(220,210,195,.07) 121px, transparent 123px 230px),
+    repeating-linear-gradient(35deg, transparent 0 180px, rgba(220,210,195,.045) 181px, transparent 183px 320px),
+    linear-gradient(145deg, #080807, #191714 48%, #080807) !important;
+}
+
+body:has(#menu.menu-section) #menu.menu-section::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(112deg, transparent 15%, rgba(230,215,195,.16) 15.1%, transparent 15.3%),
+    linear-gradient(165deg, transparent 42%, rgba(230,215,195,.10) 42.1%, transparent 42.3%),
+    linear-gradient(75deg, transparent 70%, rgba(230,215,195,.09) 70.1%, transparent 70.3%) !important;
+}
+
+body:has(#menu.menu-section) #menu.menu-section > * {
+  position: relative !important;
+}
+
+/* =========================================
+   TAU — PREMIUM GOLD TRANSITION
+   Переход между суши и чёрным мрамором
+========================================= */
+
+#menu.menu-section {
+  position: relative !important;
+}
+
+#menu.menu-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 22px;
+  z-index: 10;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle,
+      #f0d6ad 0 2px,
+      rgba(201, 167, 124, .75) 3px,
+      transparent 6px
+    ) center 10px / 20px 20px no-repeat,
+
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(201, 167, 124, .12) 15%,
+      rgba(226, 196, 157, .85) 50%,
+      rgba(201, 167, 124, .12) 85%,
+      transparent 100%
+    ) center 10px / 100% 1px no-repeat;
+
+  filter: drop-shadow(0 0 5px rgba(201, 167, 124, .65));
+}

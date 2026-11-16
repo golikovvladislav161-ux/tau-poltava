@@ -1,0 +1,586 @@
+
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080706">
+  <title>TAU POLTAVA — Бронювання</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <a class="brand-lockup" href="index.html" aria-label="TAU Poltava">
+    <span class="brand-symbol">
+      <i></i><b>T A U</b><em></em>
+    </span>
+  </a>
+
+  <div class="top-actions">
+    <button class="icon-btn" id="menu-toggle" aria-label="Відкрити меню" aria-expanded="false">
+      <span class="menu-lines"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<nav class="tau-dropdown" id="tau-dropdown" aria-label="Навігація TAU">
+  <a href="index.html"><span>Головна</span><i class="tau-arrow" aria-hidden="true"></i></a>
+  <a href="menu.html?mode=dinein"><span>У закладі</span><i class="tau-arrow" aria-hidden="true"></i></a>
+  <a href="menu.html?mode=delivery"><span>Доставка та самовивіз</span><i class="tau-arrow" aria-hidden="true"></i></a>
+  <a href="corporate.html"><span>Корпоративи</span><i class="tau-arrow" aria-hidden="true"></i></a>
+</nav>
+
+<main class="booking-page">
+
+  <section class="booking-hero">
+    <span class="eyebrow">TAU · POLTAVA</span>
+    <div class="booking-line"></div>
+
+    <h1>Бронювання<br><span>столиків</span></h1>
+
+    <p>Особливі моменти починаються за одним столом.</p>
+
+    <a class="booking-button" href="tel:+380993587888">
+      Зателефонувати для бронювання
+      <span class="tau-arrow" aria-hidden="true"></span>
+    </a>
+  </section>
+
+  <section class="booking-details">
+    <span class="eyebrow">YOUR EVENING AT TAU</span>
+    <h2>Чекаємо на вас</h2>
+
+    <p>
+      Забронюйте столик заздалегідь, щоб насолодитися атмосферою TAU та паназіатською кухнею.
+    </p>
+  </section>
+
+</main>
+
+<footer class="tau-footer" id="contacts">
+
+  <div class="footer-brand">
+    <h2>TAU POLTAVA</h2>
+    <span>PAN ASIAN RESTAURANT</span>
+  </div>
+
+  <div class="footer-section">
+    <h3>Адреса</h3>
+    <p>вул. Соборності, 44<br>Полтава, Україна</p>
+    <a href="https://www.google.com/maps/search/?api=1&query=TAU+Sobornosti+44+Poltava" target="_blank" rel="noopener">
+      Прокласти маршрут <span class="tau-arrow" aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="footer-section">
+    <h3>Телефон</h3>
+    <a href="tel:+380993587888">+38 (099) 358 78 88</a>
+  </div>
+
+  <div class="footer-section">
+    <h3>Робочий час</h3>
+    <p>Щодня<br>10:00 — 22:00</p>
+  </div>
+
+  <div class="footer-section">
+    <h3>Ми у соцмережах</h3>
+    <a href="https://www.instagram.com/tau.poltava/" target="_blank" rel="noopener">
+      @tau.poltava <span class="tau-arrow" aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="footer-map">
+    <span class="footer-eyebrow">FIND TAU</span>
+    <h3>Завітайте до нас</h3>
+
+    <iframe
+      title="TAU на Google Maps"
+      src="https://www.google.com/maps?q=TAU%2C%20Sobornosti%20Street%2044%2C%20Poltava%2C%20Ukraine&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen>
+    </iframe>
+
+    <a href="https://www.google.com/maps?q=TAU%2C%20Sobornosti%20Street%2044%2C%20Poltava%2C%20Ukraine" target="_blank" rel="noopener">
+      TAU на Google Maps <span class="tau-arrow" aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© TAU POLTAVA</span>
+    <span>Зроблено зі смаком</span>
+  </div>
+
+</footer>
+
+<style>
+
+/* HEADER */
+
+.topbar {
+  z-index: 1000 !important;
+}
+
+.top-actions {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+}
+
+#menu-toggle {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  color: #e8c98f !important;
+  background: rgba(8,7,6,.65) !important;
+  border: 1px solid rgba(197,163,106,.35) !important;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(197,163,106,.25), 0 0 26px rgba(197,163,106,.14);
+  cursor: pointer;
+}
+
+.menu-lines {
+  width: 21px;
+  display: flex !important;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-lines i {
+  display: block !important;
+  width: 21px;
+  height: 1.5px;
+  background: #f0d5a0 !important;
+  box-shadow: 0 0 8px rgba(240,213,160,.95);
+}
+
+/* DROPDOWN */
+
+.tau-dropdown {
+  position: absolute;
+  z-index: 1100;
+  top: 88px;
+  right: 24px;
+  width: min(360px, calc(100vw - 36px));
+  padding: 12px 25px;
+  background: rgba(13,12,10,.98);
+  border: 1px solid rgba(197,163,106,.38);
+  box-shadow: 0 18px 55px rgba(0,0,0,.65);
+  backdrop-filter: blur(18px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: .25s ease;
+}
+
+.tau-dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.tau-dropdown a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 0;
+  color: #eee4d4;
+  text-decoration: none;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(197,163,106,.16);
+  transition: color .25s ease, padding .25s ease;
+}
+
+.tau-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.tau-dropdown a:hover {
+  color: #d9b878;
+  padding-left: 7px;
+}
+
+/* BOOKING */
+
+.booking-page {
+  min-height: 80vh;
+  color: #eee5d8;
+}
+
+.booking-hero {
+  min-height: 570px;
+  padding: 150px 8% 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background:
+    linear-gradient(90deg, rgba(8,7,6,.96), rgba(8,7,6,.65)),
+    url("assets/hero.jpg") center/cover no-repeat;
+}
+
+.booking-hero .eyebrow,
+.booking-details .eyebrow {
+  color: #c5a36a;
+  letter-spacing: 3px;
+  font-family: Manrope, sans-serif;
+  font-size: 10px;
+}
+
+.booking-line {
+  width: 75px;
+  height: 1px;
+  background: #c5a36a;
+  margin: 28px 0;
+}
+
+.booking-hero h1 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(58px, 9vw, 105px);
+  font-weight: 400;
+  line-height: .9;
+}
+
+.booking-hero h1 span {
+  color: #c5a36a;
+}
+
+.booking-hero > p {
+  margin: 28px 0;
+  font-family: Manrope, sans-serif;
+  font-size: 13px;
+  color: #c8bfb1;
+  line-height: 1.8;
+}
+
+.booking-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 24px;
+  border: 1px solid #c5a36a;
+  color: #e8c98f;
+  text-decoration: none;
+  font-family: Manrope, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  transition: .25s ease;
+}
+
+.booking-button:hover {
+  background: #c5a36a;
+  color: #080706;
+}
+
+.booking-details {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 90px 28px;
+}
+
+.booking-details h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+  font-weight: 400;
+  margin: 18px 0;
+}
+
+.booking-details > p {
+  max-width: 540px;
+  color: #aaa095;
+  font-family: Manrope, sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* FOOTER */
+
+.tau-footer {
+  width: 100%;
+  padding: 65px 8% 25px;
+  background: #080706;
+  color: #eee5d8;
+  border-top: 1px solid rgba(197,163,106,.3);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+.footer-brand {
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(197,163,106,.2);
+  width: 100%;
+}
+
+.footer-brand h2 {
+  margin: 0;
+  color: #e8c98f;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 35px;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+.footer-brand span,
+.footer-eyebrow {
+  color: #c5a36a;
+  font-family: Manrope, sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.footer-section h3 {
+  margin: 0;
+  color: #c5a36a;
+  font-family: Manrope, sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.footer-section p,
+.footer-section a {
+  margin: 0;
+  color: #c8bfb1;
+  font-family: Manrope, sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+  text-decoration: none;
+}
+
+.footer-section a:hover,
+.footer-map a:hover {
+  color: #e8c98f;
+}
+
+.footer-map {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.footer-map h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.footer-map iframe {
+  display: block;
+  width: 100%;
+  height: 280px;
+  border: 1px solid rgba(197,163,106,.3);
+  filter: grayscale(1) brightness(.75);
+}
+
+.footer-map a {
+  color: #c5a36a;
+  font-family: Manrope, sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  width: 100%;
+  padding-top: 22px;
+  border-top: 1px solid rgba(197,163,106,.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #918779;
+  font-family: Manrope, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   ЕДИНЫЕ ТОНКИЕ СТРЕЛКИ TAU
+   DESKTOP + MOBILE
+========================================= */
+
+.tau-arrow {
+  display: inline-block !important;
+  position: relative;
+  width: 13px;
+  height: 13px;
+  min-width: 13px;
+  margin-left: 8px;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #d9b486 !important;
+  font-size: 0 !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  opacity: .9;
+  vertical-align: middle;
+  flex-shrink: 0;
+  box-shadow: none !important;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+.tau-arrow::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 1px;
+  background: currentColor;
+  top: 6px;
+  left: 0;
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+
+.tau-arrow::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  top: 0;
+  right: 0;
+}
+
+/* DROPDOWN ARROWS */
+
+.tau-dropdown a .tau-arrow {
+  margin-left: 12px;
+}
+
+.tau-dropdown a:hover .tau-arrow {
+  transform: translate(3px, -3px);
+  opacity: 1;
+}
+
+/* BUTTON ARROWS */
+
+.booking-button .tau-arrow {
+  margin-left: 12px;
+}
+
+.booking-button:hover .tau-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* FOOTER ARROWS */
+
+.footer-section a .tau-arrow,
+.footer-map a .tau-arrow {
+  margin-left: 5px;
+}
+
+.footer-section a:hover .tau-arrow,
+.footer-map a:hover .tau-arrow {
+  transform: translate(3px, -3px);
+  opacity: 1;
+}
+
+@media(max-width:600px) {
+
+  .tau-dropdown {
+    top: 85px;
+    right: 18px;
+  }
+
+  .tau-dropdown a {
+    font-size: 20px;
+    padding: 16px 0;
+  }
+
+  .booking-hero {
+    min-height: 500px;
+    padding: 130px 25px 75px;
+  }
+
+  .booking-details {
+    padding: 65px 25px;
+  }
+
+  .tau-footer {
+    padding: 50px 25px 22px;
+    gap: 27px;
+  }
+
+  .footer-brand h2 {
+    font-size: 30px;
+  }
+
+  .footer-map iframe {
+    height: 230px;
+  }
+
+  .tau-arrow {
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    margin-left: 7px;
+  }
+}
+</style>
+
+<script>
+(() => {
+  const toggle = document.getElementById("menu-toggle");
+  const dropdown = document.getElementById("tau-dropdown");
+
+  if (!toggle || !dropdown) return;
+
+  toggle.addEventListener("click", event => {
+    event.stopPropagation();
+
+    const opened = dropdown.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", String(opened));
+  });
+
+  document.addEventListener("click", event => {
+    if (!toggle.contains(event.target) && !dropdown.contains(event.target)) {
+      dropdown.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  dropdown.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      dropdown.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  function updateMenuButton() {
+    toggle.classList.toggle("scrolled", window.scrollY > 50);
+  }
+
+  window.addEventListener("scroll", updateMenuButton, { passive: true });
+  updateMenuButton();
+})();
+</script>
+
+</body>
+</html>

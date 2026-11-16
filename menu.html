@@ -1,0 +1,693 @@
+
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080706">
+<title>TAU POLTAVA — Меню</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <a class="brand-lockup" href="index.html" aria-label="TAU Poltava home">
+    <span class="brand-symbol">
+      <i></i><b>T A U</b><em></em>
+    </span>
+  </a>
+
+  <div class="top-actions">
+    <button class="icon-btn" id="cart-open" aria-label="Кошик">
+      <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 8h14l1 13H4L5 8Z"/>
+        <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+      </svg>
+      <b id="cart-count">0</b>
+    </button>
+
+    <button class="icon-btn" id="menu-toggle" aria-label="Відкрити меню" aria-expanded="false">
+      <span class="menu-lines"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<nav class="tau-dropdown" id="tau-dropdown" aria-label="Навігація TAU">
+  <a href="index.html">
+    <span>Головна</span><i class="tau-arrow" aria-hidden="true"></i>
+  </a>
+  <a href="menu.html?mode=dinein" data-mode="dinein">
+    <span>У закладі</span><i class="tau-arrow" aria-hidden="true"></i>
+  </a>
+  <a href="menu.html?mode=delivery" data-mode="delivery">
+    <span>Доставка та самовивіз</span><i class="tau-arrow" aria-hidden="true"></i>
+  </a>
+  <a href="booking.html">
+    <span>Бронювання столиків</span><i class="tau-arrow" aria-hidden="true"></i>
+  </a>
+  <a href="corporate.html">
+    <span>Корпоративи</span><i class="tau-arrow" aria-hidden="true"></i>
+  </a>
+</nav>
+
+<main>
+
+<section class="hero home-hero" id="home">
+  <div class="hero-copy">
+    <h1 class="tau-title">
+      TAU
+      <span>RESTAURANT</span>
+    </h1>
+    <div class="tau-line"></div>
+    <p class="tagline">
+      ПАНАЗІАТСЬКА КУХНЯ<br>
+      З ЄВРОПЕЙСЬКИМИ МОТИВАМИ
+    </p>
+  </div>
+  <div class="scroll-cue">
+    <span class="tau-arrow tau-arrow-down" aria-hidden="true"></span>
+  </div>
+</section>
+
+<section class="menu-section" id="menu">
+
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">TAU RESTAURANT</span>
+      <h2>Меню</h2>
+    </div>
+    <span class="muted">Смак у кожній деталі</span>
+  </div>
+
+  <nav class="category-nav" id="category-nav" aria-label="Категорії меню"></nav>
+  <div id="menu-groups"></div>
+
+</section>
+
+<section class="info-section" id="about">
+  <span class="eyebrow">OUR PHILOSOPHY</span>
+  <h2>Мистецтво азійського смаку</h2>
+  <p>Поєднуємо традиції азійської кухні, свіжі інгредієнти та увагу до кожної деталі.</p>
+</section>
+
+<section class="info-section delivery-section" id="delivery">
+  <span class="eyebrow">DELIVERY & PICKUP</span>
+  <h2>Смак TAU — там, де ви</h2>
+  <p>Замовляйте улюблені страви з доставкою або забирайте самостійно.</p>
+  <a class="hero-cta" href="#menu">
+    Обрати страви <span class="tau-arrow" aria-hidden="true"></span>
+  </a>
+</section>
+
+</main>
+
+<footer class="tau-footer" id="contacts">
+
+  <div class="footer-brand">
+    <h2>TAU POLTAVA</h2>
+    <span>PAN ASIAN RESTAURANT</span>
+  </div>
+
+  <div class="footer-section">
+    <h3>Адреса</h3>
+    <p>вул. Соборності, 44<br>Полтава, Україна</p>
+    <a href="https://www.google.com/maps/search/?api=1&query=TAU+Sobornosti+44+Poltava" target="_blank" rel="noopener">
+      Прокласти маршрут <i class="tau-arrow" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <div class="footer-section">
+    <h3>Телефон</h3>
+    <a href="tel:+380993587888">+38 (099) 358 78 88</a>
+  </div>
+
+  <div class="footer-section">
+    <h3>Робочий час</h3>
+    <p>Щодня<br>10:00 — 22:00</p>
+  </div>
+
+  <div class="footer-section">
+    <h3>Ми у соцмережах</h3>
+    <a href="https://www.instagram.com/tau.poltava/" target="_blank" rel="noopener">
+      @tau.poltava <i class="tau-arrow" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <div class="footer-map">
+    <span class="footer-eyebrow">FIND TAU</span>
+    <h3>Завітайте до нас</h3>
+    <iframe
+      title="TAU на Google Maps"
+      src="https://www.google.com/maps?q=TAU%2C%20Sobornosti%20Street%2044%2C%20Poltava%2C%20Ukraine&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen>
+    </iframe>
+    <a href="https://www.google.com/maps?q=TAU%2C%20Sobornosti%20Street%2044%2C%20Poltava%2C%20Ukraine" target="_blank" rel="noopener">
+      TAU на Google Maps <i class="tau-arrow" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© TAU POLTAVA</span>
+    <span>Зроблено зі смаком</span>
+  </div>
+
+</footer>
+
+<aside class="cart-panel" id="cart-panel">
+  <div class="cart-head">
+    <div>
+      <span class="eyebrow">TAU · POLTAVA</span>
+      <h2>Кошик</h2>
+      <p class="muted">Ваше замовлення</p>
+    </div>
+    <button class="close-btn" id="cart-close">×</button>
+  </div>
+
+  <div id="cart-items" class="cart-items">
+    <p class="muted">Кошик поки порожній</p>
+  </div>
+
+  <div class="cart-bottom">
+    <div class="total">
+      <span>До сплати</span>
+      <strong id="cart-total">0 ₴</strong>
+    </div>
+    <button class="gold-button" id="checkout">
+      Перейти до оформлення <span class="tau-arrow" aria-hidden="true"></span>
+    </button>
+    <p class="cart-hint">Доставка або самовивіз</p>
+  </div>
+</aside>
+
+<div class="scrim" id="scrim"></div>
+<div class="toast" id="toast"></div>
+
+<style>
+
+/* HEADER */
+.topbar {
+  z-index: 1000 !important;
+}
+
+.top-actions {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+}
+
+#menu-toggle {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  color: #e8c98f !important;
+  background: rgba(8,7,6,.65) !important;
+  border: 1px solid rgba(197,163,106,.35) !important;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(197,163,106,.25), 0 0 26px rgba(197,163,106,.14);
+  cursor: pointer;
+}
+
+.menu-lines {
+  width: 21px;
+  display: flex !important;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-lines i {
+  display: block !important;
+  width: 21px;
+  height: 1.5px;
+  background: #f0d5a0 !important;
+  box-shadow: 0 0 8px rgba(240,213,160,.95);
+}
+
+/* DROPDOWN */
+.tau-dropdown {
+  position: absolute;
+  z-index: 1100;
+  top: 88px;
+  right: 24px;
+  width: min(360px, calc(100vw - 36px));
+  padding: 12px 25px;
+  background: rgba(13,12,10,.98);
+  border: 1px solid rgba(197,163,106,.38);
+  box-shadow: 0 18px 55px rgba(0,0,0,.65);
+  backdrop-filter: blur(18px);
+  border-radius: 2px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: .25s ease;
+}
+
+.tau-dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.tau-dropdown a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 19px 0;
+  color: #eee4d4;
+  text-decoration: none;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: .4px;
+  border-bottom: 1px solid rgba(197,163,106,.16);
+  transition: color .25s ease, padding .25s ease;
+}
+
+.tau-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.tau-dropdown a:hover {
+  color: #d9b878;
+  padding-left: 7px;
+}
+
+/* FOOTER */
+.tau-footer {
+  width: 100%;
+  padding: 65px 8% 25px;
+  background: #080706;
+  color: #eee5d8;
+  border-top: 1px solid rgba(197,163,106,.3);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+.footer-brand {
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(197,163,106,.2);
+  width: 100%;
+}
+
+.footer-brand h2 {
+  margin: 0;
+  color: #e8c98f;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 35px;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+.footer-brand span,
+.footer-eyebrow {
+  color: #c5a36a;
+  font-family: Manrope, sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.footer-section h3 {
+  margin: 0;
+  color: #c5a36a;
+  font-family: Manrope, sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.footer-section p,
+.footer-section a {
+  margin: 0;
+  color: #c8bfb1;
+  font-family: Manrope, sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+  text-decoration: none;
+}
+
+.footer-section a:hover,
+.footer-map a:hover {
+  color: #e8c98f;
+}
+
+.footer-map {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.footer-map h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.footer-map iframe {
+  display: block;
+  width: 100%;
+  height: 280px;
+  border: 1px solid rgba(197,163,106,.3);
+  filter: grayscale(1) brightness(.75);
+}
+
+.footer-map a {
+  color: #c5a36a;
+  font-family: Manrope, sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  width: 100%;
+  padding-top: 22px;
+  border-top: 1px solid rgba(197,163,106,.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #918779;
+  font-family: Manrope, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+/* ЕДИНЫЕ СТРЕЛКИ */
+.tau-arrow {
+  display: inline-block !important;
+  position: relative;
+  width: 13px;
+  height: 13px;
+  min-width: 13px;
+  margin-left: 8px;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #d9b486 !important;
+  font-size: 0 !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  opacity: .9;
+  vertical-align: middle;
+  flex-shrink: 0;
+  box-shadow: none !important;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+.tau-arrow::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 1px;
+  background: currentColor;
+  top: 6px;
+  left: 0;
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+
+.tau-arrow::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  top: 0;
+  right: 0;
+}
+
+.tau-dropdown a .tau-arrow {
+  margin-left: 12px;
+}
+
+.tau-dropdown a:hover .tau-arrow,
+.footer-section a:hover .tau-arrow,
+.footer-map a:hover .tau-arrow {
+  transform: translate(3px, -3px);
+  opacity: 1;
+}
+
+.hero-cta .tau-arrow,
+.gold-button .tau-arrow {
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  margin-left: 9px;
+}
+
+.hero-cta:hover .tau-arrow,
+.gold-button:hover .tau-arrow {
+  transform: translate(3px, -3px);
+  opacity: 1;
+}
+
+/* СТРЕЛКА ПРОКРУТКИ */
+.scroll-cue .tau-arrow-down {
+  width: 13px;
+  height: 18px;
+  min-width: 13px;
+  margin: 0;
+  color: #d9b486 !important;
+  opacity: .9;
+}
+
+.scroll-cue .tau-arrow-down::before {
+  width: 1px;
+  height: 13px;
+  left: 6px;
+  top: 0;
+  background: currentColor;
+  transform: none;
+}
+
+.scroll-cue .tau-arrow-down::after {
+  width: 7px;
+  height: 7px;
+  left: 2px;
+  right: auto;
+  top: 6px;
+  border: 0;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: rotate(45deg);
+}
+
+/* =========================================
+   ПЛАВНЫЙ ПЕРЕХОД ОТ ФОТОГРАФИИ К МРАМОРУ
+========================================= */
+
+#home.home-hero {
+  position: relative;
+  isolation: isolate;
+}
+
+#home.home-hero::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: clamp(190px, 27vw, 360px);
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(8,7,6,0) 0%,
+    rgba(8,7,6,.10) 20%,
+    rgba(8,7,6,.38) 45%,
+    rgba(8,7,6,.76) 72%,
+    #090908 100%
+  );
+}
+
+#home.home-hero .hero-copy,
+#home.home-hero .scroll-cue {
+  position: relative;
+  z-index: 3;
+}
+
+/* =========================================
+   ЧЁРНЫЙ МРАМОР — ТОЛЬКО РАЗДЕЛ БЛЮД
+========================================= */
+
+#menu.menu-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-top: 0;
+  padding-top: 55px;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(130,115,100,.10), transparent 35%),
+    radial-gradient(ellipse at 85% 65%, rgba(150,125,95,.08), transparent 38%),
+    repeating-linear-gradient(
+      125deg,
+      transparent 0,
+      transparent 95px,
+      rgba(190,175,155,.035) 97px,
+      transparent 100px,
+      transparent 180px
+    ),
+    repeating-linear-gradient(
+      35deg,
+      transparent 0,
+      transparent 145px,
+      rgba(210,195,175,.045) 147px,
+      transparent 150px,
+      transparent 260px
+    ),
+    linear-gradient(145deg,#090908,#151310 45%,#080807) !important;
+}
+
+#menu.menu-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .75;
+  background:
+    linear-gradient(112deg,transparent 10%,rgba(210,195,175,.09) 10.15%,transparent 10.4%,transparent 10.8%,rgba(210,195,175,.045) 11%,transparent 11.2%),
+    linear-gradient(165deg,transparent 37%,rgba(190,175,155,.08) 37.15%,transparent 37.35%,transparent 37.8%,rgba(190,175,155,.04) 38%,transparent 38.2%),
+    linear-gradient(75deg,transparent 68%,rgba(205,185,155,.08) 68.15%,transparent 68.4%),
+    repeating-linear-gradient(155deg,transparent 0,transparent 210px,rgba(220,205,185,.035) 211px,transparent 213px,transparent 310px);
+}
+
+#menu.menu-section > * {
+  position: relative;
+}
+
+#menu #category-nav,
+#menu #menu-groups {
+  background: transparent !important;
+}
+
+#menu .product {
+  background: rgba(10,9,8,.88) !important;
+  border-color: rgba(201,167,124,.2);
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+@media(max-width:600px) {
+  .tau-dropdown {
+    top: 88px;
+    right: 18px;
+  }
+
+  .tau-dropdown a {
+    font-size: 19px;
+    padding: 17px 0;
+  }
+
+  .tau-footer {
+    padding: 50px 25px 22px;
+    gap: 27px;
+  }
+
+  .footer-brand h2 {
+    font-size: 30px;
+  }
+
+  .footer-map iframe {
+    height: 230px;
+  }
+
+  .tau-arrow {
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    margin-left: 7px;
+  }
+
+  .scroll-cue .tau-arrow-down {
+    width: 13px;
+    height: 18px;
+    min-width: 13px;
+  }
+
+  #home.home-hero::after {
+    height: 220px;
+    background: linear-gradient(
+      to bottom,
+      rgba(8,7,6,0) 0%,
+      rgba(8,7,6,.18) 25%,
+      rgba(8,7,6,.55) 58%,
+      #090908 100%
+    );
+  }
+
+  #menu.menu-section {
+    padding-top: 40px;
+    background:
+      radial-gradient(ellipse at 20% 15%,rgba(140,120,100,.09),transparent 40%),
+      repeating-linear-gradient(125deg,transparent 0,transparent 110px,rgba(190,175,155,.035) 112px,transparent 115px),
+      linear-gradient(145deg,#090908,#14120f 50%,#080807) !important;
+  }
+}
+
+</style>
+
+<script>
+(() => {
+  const toggle = document.getElementById("menu-toggle");
+  const dropdown = document.getElementById("tau-dropdown");
+
+  if (!toggle || !dropdown) return;
+
+  const currentMode = new URLSearchParams(location.search).get("mode");
+
+  dropdown.querySelectorAll("[data-mode]").forEach(link => {
+    if (link.dataset.mode === currentMode) {
+      link.remove();
+    }
+  });
+
+  toggle.addEventListener("click", event => {
+    event.stopPropagation();
+    const opened = dropdown.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", String(opened));
+  });
+
+  document.addEventListener("click", event => {
+    if (!toggle.contains(event.target) && !dropdown.contains(event.target)) {
+      dropdown.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  dropdown.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      dropdown.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+})();
+</script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
