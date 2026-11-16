@@ -251,6 +251,8 @@ button{font:inherit;color:inherit}
 .home-hero:after{background:none}
 
 /* LANDING PAGE */
+
+/* LANDING PAGE */
 .landing-hero{
   position:relative;
   display:flex;
@@ -263,8 +265,9 @@ button{font:inherit;color:inherit}
   background:
     linear-gradient(90deg,rgba(0,0,0,.86),rgba(0,0,0,.24) 62%,rgba(0,0,0,.05)),
     linear-gradient(0deg,#080706 0%,transparent 36%),
-    url("./hero.jpg") center 45%/cover no-repeat
+    url("./hero.jpg") center 45%/cover no-repeat;
 }
+
 .landing .brand-lockup{
   width:180px;
   display:flex;
@@ -272,10 +275,12 @@ button{font:inherit;color:inherit}
   align-items:center;
   gap:0;
   color:#d9b486;
-  text-decoration:none
+  text-decoration:none;
 }
+
 .landing .brand-symbol{
-  width:112px;height:112px;
+  width:112px;
+  height:112px;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -283,53 +288,50 @@ button{font:inherit;color:inherit}
   gap:8px;
   border-radius:50%;
   background:#211d19;
-  box-shadow:0 0 38px #000b
+  box-shadow:0 0 38px #000b;
 }
+
 .landing .brand-symbol i{
   display:block;
-  width:3px;height:17px;
-  background:#f4e9dc
+  width:3px;
+  height:17px;
+  background:#f4e9dc;
 }
+
 .landing .brand-symbol b{
   color:#f5eee5;
   font:400 25px "Cormorant Garamond";
-  letter-spacing:.12em
+  letter-spacing:.12em;
 }
+
 .landing .brand-symbol em{
   display:block;
-  width:27px;height:3px;
-  background:#f4e9dc
+  width:27px;
+  height:3px;
+  background:#f4e9dc;
 }
+
 .landing .brand-lockup small,
-.landing .brand-lockup strong{display:none}
+.landing .brand-lockup strong{
+  display:none;
+}
+
 .header-instagram{
   padding-top:32px;
   color:#d9b486;
   font-size:10px;
   letter-spacing:.2em;
-  text-decoration:none
+  text-decoration:none;
 }
-.landing-hero{
-  position:relative;
-  display:flex;
-  align-items:flex-end;
-  min-height:650px;
-  height:83vh;
-  max-height:900px;
-  padding:0 clamp(24px,8vw,120px) 85px;
-  overflow:hidden;
-  background:
-    linear-gradient(90deg,rgba(0,0,0,.86),rgba(0,0,0,.24) 62%,rgba(0,0,0,.05)),
-    linear-gradient(0deg,#080706 0%,transparent 36%),
-    url("assets/hero.jpg") center 45%/cover no-repeat
-}
+
 .landing-hero:after{
   content:"";
   position:absolute;
   inset:0;
   pointer-events:none;
-  background:radial-gradient(ellipse at 75% 48%,transparent 0 22%,rgba(0,0,0,.16) 72%)
+  background:radial-gradient(ellipse at 75% 48%,transparent 0 22%,rgba(0,0,0,.16) 72%);
 }
+
 .landing-copy{
   position:relative;
   z-index:1;
@@ -338,40 +340,44 @@ button{font:inherit;color:inherit}
   padding:24px 30px 25px;
   border-left:1px solid rgba(217,180,134,.55);
   background:linear-gradient(90deg,rgba(5,5,5,.66),rgba(5,5,5,.28) 78%,transparent);
-  backdrop-filter:blur(1.5px)
+  backdrop-filter:blur(1.5px);
 }
+
 .hero-kicker{
   display:block;
   margin:0 0 14px 2px;
   color:#d9b486;
   font:500 10px Manrope,Arial,sans-serif;
   letter-spacing:.25em;
-  text-shadow:0 2px 10px #000
+  text-shadow:0 2px 10px #000;
 }
+
 .landing-copy .eyebrow{
   color:#d9b486;
   font-size:11px;
-  letter-spacing:.27em
+  letter-spacing:.27em;
 }
+
 .landing-copy h1{
   margin:0;
   color:#f3ece3;
   font:400 clamp(48px,6.2vw,76px)/.94 "Cormorant Garamond";
-  text-shadow:0 3px 22px #000,0 1px 5px #000
+  text-shadow:0 3px 22px #000,0 1px 5px #000;
 }
+
 .landing-copy h1 span{
   display:inline-block;
   color:#e0bd91;
-  text-shadow:0 3px 22px #000,0 1px 5px #000
+  text-shadow:0 3px 22px #000,0 1px 5px #000;
 }
+
 .landing-copy p{
   max-width:420px;
   color:#c4b8aa;
   font-size:14px;
   line-height:1.8;
-  letter-spacing:.03em
+  letter-spacing:.03em;
 }
-
 /* CHOICE CARDS */
 .choice-section{
   max-width:1250px;
