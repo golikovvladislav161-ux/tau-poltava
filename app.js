@@ -938,3 +938,61 @@ updateSubcategoryNav();
 
   updateMenuButton();
 })();
+/* =========================================
+   TAU — НОРМАЛЬНАЯ ФИКСАЦИЯ НАВИГАЦИИ
+========================================= */
+
+(() => {
+  const style = document.createElement('style');
+
+  style.textContent = `
+    #category-nav {
+      position: sticky !important;
+      top: 0 !important;
+      z-index: 1000 !important;
+      background: #080706 !important;
+      isolation: isolate;
+    }
+
+    #sticky-subcategory-nav {
+      position: sticky !important;
+      top: var(--tau-main-nav-height, 60px) !important;
+      z-index: 999 !important;
+      background: #080706 !important;
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      overflow-y: hidden !important;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    #sticky-subcategory-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    #sticky-subcategory-nav button {
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+  `;
+
+  document.head.appendChild(style);
+
+  function setNavigationHeight() {
+    const nav = document.querySelector('#category-nav');
+
+    if (nav) {
+      document.documentElement.style.setProperty(
+        '--tau-main-nav-height',
+        nav.offsetHeight + 'px'
+      );
+    }
+  }
+
+  window.addEventListener('resize', setNavigationHeight);
+  window.addEventListener('load', setNavigationHeight);
+
+  setNavigationHeight();
+  setTimeout(setNavigationHeight, 300);
+})();
