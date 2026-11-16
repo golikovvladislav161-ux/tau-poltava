@@ -2866,3 +2866,39 @@ body:has(#menu.menu-section) #menu.menu-section > * {
     padding: 10px 12px !important;
   }
 }
+
+/* TAU — FIX STICKY MENU CATEGORIES */
+
+/* Убираем ограничение, которое ломало закрепление */
+#menu.menu-section,
+.menu-section,
+body:has(#menu.menu-section) #menu.menu-section,
+#menu-groups,
+#menu-groups > .main-menu-groups {
+  overflow: visible !important;
+}
+
+/* Первая панель: Сніданки / Основне меню / Бар */
+#menu #category-nav {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1001 !important;
+  background: rgba(8, 7, 6, .98) !important;
+}
+
+/* Вторая панель: Устриці / Салати / Супи и остальные */
+#menu #sticky-subcategory-nav,
+#menu .subcategory-nav {
+  position: sticky !important;
+  top: var(--tau-main-nav-height, 64px) !important;
+  z-index: 1000 !important;
+  background: rgba(8, 7, 6, .98) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  margin-top: 0 !important;
+}
+
+/* Заголовки блюд не прячутся под панелями */
+#menu .menu-category {
+  scroll-margin-top: 135px !important;
+}
